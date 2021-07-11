@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Войти</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {{ next }}
+    <button type="submit">Войти</button>
+    <input type="hidden" name="next" value="{{ next }}" />
+</form>
+</body>
+</html>
